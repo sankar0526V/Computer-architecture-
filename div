@@ -1,0 +1,14 @@
+LXI H, 2050    
+MOV B, M       
+MVI C, 00     
+INX H         
+MOV A, M       
+NEXT: CMP B    
+JC LOOP        
+SUB B          
+INR C          
+JMP NEXT       
+LOOP: STA 2052 
+MOV A, C       
+STA 2053      
+HLT           
